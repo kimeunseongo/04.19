@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/main.css" rel="stylesheet">
+
+	<title>진맛과</title>
+
+	<style>
+		
+		* {margin: 0 auto; padding: 0;}
+		ul,ol,li {list-style: none;}
+
+		#pop {width: 100%; height:45px;background-color:#603912; margin:0 auto; text-align: center;}
+		#pop> a >img {width: 1260px; }
+
+		header {width: 1260px; height:270px; margin:0 auto;  }
+
+
+
+		#search {width: 400px; height:50px; font-size:15px;margin:0 0 0 20px; }
+
+		#search> p >a {float: left;margin:10px 0 0 70px; text-decoration: none; color: #666; border: 1px solid #c2ccd6; border-radius: 15px; padding: 5px; margin: 10px 0 0 20px; }
+
+
+		#search> p > a >span {font-weight: bold; color:#cd8c6d; }
+
+
+		#logo {width: 500px; height:100px; margin:0px auto; }
+		#logo> a >img {width:100%;height: 100px;}
+
+		#login {width: 400px; height:50px; float: right;
+			margin: -150px 0px 0 0px; }
+
+			#login > ul {font-size:13px;}
+			#login > ul>li {float: right; margin: 15px 20px 0 0px; }
+			#login>ul>li>a {text-decoration: none; color: #666;}
+			#login > ul li:first-of-type {font-weight: bold;}
+
+
+			nav {width: 1260px; height:50px;  float: left; margin: 70px 0 0 0px; }
+
+			nav> ul { font-size:18px;}
+			nav> ul > li{float: left; margin: 15px 0 0 50px; }
+			nav> ul > li >a{text-decoration: none; color: black; margin: 0px 0 0 10px; font-weight: bold; }
+			nav > ul > li >a:hover{opacity: 0.7;}
+
+
+
+			#sub { width: 1260px; height: 1000px; margin: 100 auto;  background-color: red;position: relative;}
+
+			#product { width: 550px; height: 850px; background-color: gold; position: absolute; top: 70px; left: 70px;}
+
+			#imgbox { width: 550px; height: 700px; background-color: green;}
+
+			#imgbox>img{width: 100%; height: 100%;}
+
+			#product > .mini { width: 100px; height: 120px; background-color: hotpink; display: inline-block; margin: 20px 0 0 5px;}
+
+			.mini>a>img{width: 100%; height: 100%;}
+
+			.mini>a>img:hover{border: 1px solid black;}
+
+
+
+			* {box-sizing:border-box;}
+
+
+			#price { width: 500px; height: 900px; background-color: pink; position:absolute; top:70px; 
+				left: 690px;}
+
+				#price>h2{margin: 20px 0 0 0px;}
+
+				#price>p{color: #666; margin: 10px auto;}
+
+				#price>h3{font-size: 28px; font-weight: bold;}
+
+				#price>table{width:500px; font-size: 14px; position: absolute; top:230px ; left: 0px; margin: 0 0px 100px 0px; background-color: yellow;}
+
+				td{padding: 0 0px 0 0px;}
+
+				td:first-child {width:350px; }
+
+				.purchase{margin: 20px 0 0 0px;}
+
+				.member{  margin: 20px 0 0 0px;}
+
+
+				.rel { width: 230px; height: 80px; float: left; margin: 400px 0 0 13px; cursor:pointer; }
+
+				.rel{background-color:#4d3319;  color:#fff; border:none; }
+
+
+
+
+				#tab{width: 1260px; height: 5000px; background-color: yellowgreen;}
+
+				#review{width: 1260px; height:180px ; background-color: orange;}
+
+				#detail{width: 1260px; height:60px ; background-color: white; float: left;margin: 60px 0 0 0px; border-bottom: 1px solid black;}
+
+				#wrap{width:600px; height:60px ; background-color: red; }
+
+
+				.question{ width:200px; height:60px ; background-color: pink; float: left; border: 1px solid black; text-align: center; padding: 15px;}
+
+				.question:hover{cursor: pointer;}
+
+
+				.question>a{text-decoration: none; color: black;}
+
+
+				#event{width: 1260px; height:240px ; background-color: blue;}
+
+
+				#event>img{margin: 0 0 0 120px;}
+
+				#open{width: 1260px; height:240px ; background-color: red;}
+
+				#open>img{margin: 0 0 0 120px;}
+
+
+				#notice{width: 1260px; height:780px ; background-color: pink;}
+
+				#notice>img{margin: 0 0 0 120px;}
+
+
+
+				#notice2{width: 1260px; height:1800px ; background-color: pink;}
+
+				#notice2>img{margin: 0 0 0 120px;}
+
+
+				#underbar{width: 1260px; height:1000px ; background-color: pink;}
+
+				#paper{width: 1260px; height:240px ; background-color: purple;}
+
+				#paper1{width: 1260px; height:80px ; background-color: yellow; border-bottom: 1px solid black;}
+
+				#bloa{width: 800px; height:40px ; background-color: skyblue; float: left; margin: 30px 0 0 10px;}
+
+				#bloa>h2{color: #666; font-weight: 100;}
+
+				.blob{width: 170px; height:40px ; background-color: gray;float: right; margin: 30px 20px 0 0px; font-size: 15px; cursor: pointer; color: white; border: 1px solid gray;}
+
+				.bloc{width: 170px; height:40px ; background-color: white; float: right; margin: 30px 0px 0 0px;  font-size: 15px; cursor: pointer; border: 1px solid gray;}
+
+
+
+				#paper2{width: 1260px; height:160px ; background-color: red;}
+
+				#paper2>h4{font-weight: bold; font-size: 18px; background-color: gray;  float: left;margin: 20px 0 0 615px; border:5px solid gray; border-radius: 50px; }
+
+
+
+				#good{width: 900px; height:80px ; background-color: green; float: left; border-bottom: 1px solid black;}
+
+				#good>p{font-size: 14px; margin: 30px 0 0 10px; background-color: pink;}
+
+
+
+				#naver{width: 180px; height:80px ; background-color: blue; float: left;border-bottom: 1px solid black;}
+
+				#naver>p{font-size: 13px; margin: 30px 0 0 5px;}
+
+
+
+				#day{width: 180px; height:80px ; background-color: purple; float: left;border-bottom: 1px solid black;}
+
+				#day>p{font-size: 13px;margin: 30px 0 0 5px; text-align: center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				footer{width: 100%;height: 500px;margin:0px auto; background-color: blueviolet;   }
+
+				.bos{width: 100%;height: 100px;margin: 20px 0px 0 0px; background-color:#603810;}
+
+
+				#box{width: 1260px;height: 130px;background-color:#603810;margin: 0 auto;}
+
+				#box>a>img{margin: 20px 0 0 30px;}
+
+
+				#box>.icon{width: 860px;height: 30px; float: right; margin: 40px 0px 0px 0px;}
+
+				.icon>h3{float: left; margin: 0px 0px 0 500px; color: #fff;}
+
+				.icon>a>img{float: left;  margin:4px 0px 0 30px;}
+
+
+
+				#underbox{width: 100%;height: 50px;background-color:#eeeeee;margin: 0 auto;}
+
+				#ubox{width: 1260px;height: 50px;margin: 0 auto;}
+
+
+				#ubox>ul{font-size: 14px;}
+
+				#ubox>ul>li{float: left; margin: 15px 0 0 20px;}
+
+				#ubox>ul>li>a{text-decoration: none; color: #666; }
+
+				#ubox>ul>li>a>span{font-weight: bold;}
+
+
+
+
+				#under2box{width: 1260px;height: 290px;margin: 0 auto; }
+
+				.end{width: 1260px;height: 250px;  float: left; margin: 40px 0 0 33px;}
+
+
+
+
+
+
+				.center {width: 385px;height: 290px; float: left; padding: 0px 20px 5px 10px; }
+
+				.center > h3 {color: black; text-transform:uppercase; margin: 0px ;}
+
+				.center>h2{margin: 0px 0 0 0px; }
+
+				.center>p{color: #666666;font-size: 12px;  }
+
+
+
+
+				.bank{width: 385px;height: 290px; float: left;padding: 0px 20px 5px 15px;}
+
+				.bank>h3{color: black; text-transform:uppercase;}
+
+				.bank>p{color: #666666; font-size: 12px; }
+
+
+
+
+
+				.company{width: 385px;height: 290px; float: left;padding: 0px 20px 5px 15px;}
+
+				.company>h3{color: black; text-transform:uppercase;}
+
+				.company>p{color: #666666; font-size: 12px; }
+
+				.company>p>a{text-decoration: none; color: #666666;}
+
+				.company>p>a:hover{text-decoration: underline;}
+
+
+
+
+
+
+
+
+
+			</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</style>
+
+
+	</head>
+	<body>
+		<div id="pop">
+
+			<a href="#"><img src="img/banner.png" alt="배너"></a>
+		</div>
+		<header>
+
+
+
+
+
+
+			<div id="search">
+
+
+				<p><a href="#">나와 맞는 AI <span>과일궁합</span>    >
+				</a></p>
+
+				<p><a href="#">새벽배송 지역검색    ></a></p>
+
+			</div>
+
+
+
+
+			<div id="logo">
+				<a href="#"><img src="img/logo.gif" alt="로고"></a>
+
+			</div>
+
+			<div id="login">
+
+
+
+				<ul>
+
+					<li><a href="#">VIP회원</a></li>
+
+
+					<li><a href="#">고객센터</a></li>
+
+
+
+					<li><a href="#">마이페이지</a></li>
+
+
+					<li>ㅣ</li>
+
+
+					<li><a href="#">회원가입</a></li>
+
+
+
+
+					<li><a href="#">로그인</a></li>
+
+
+
+				</ul>
+
+
+
+			</div>
+
+
+			<nav>
+
+				<ul>
+					<li><a href="#">갓딴배송</a></li>
+
+					<li><a href="#">제철과일</a></li>
+
+					<li><a href="#">선물과일</a></li>
+
+					<li><a href="#">과일구독</a></li>
+
+					<li><a href="#">펀딩과일</a></li>
+
+					<li><a href="#">나의과일나무</a></li>
+
+					<li><a href="#">펫과일</a></li>
+
+					<li><a href="#">기업과일</a></li>
+
+					<li><a href="#">브랜드스토리</a></li>
+
+
+				</ul>
+
+			</nav>
+		</header>
+
+		<body>
+
+			<br>
+			<hr>
+
+			<div id="sub">
+
+				<div id="product">
+
+					<div id="imgbox">
+
+						<img src="img/product.jpg" alt="상품">
+
+					</div>
+
+					<div class="mini">
+
+						<a href="#"><img src="img/product.jpg" alt="상품"></a>
+
+					</div>
+
+					<div class="mini">
+
+						<a href="#"><img src="img/product2.jpg" alt="상품"></a>
+
+					</div>
+
+					<div class="mini">
+
+						<a href="#"><img src="img/product3.jpg" alt="상품"></a>
+
+					</div>
+
+					<div class="mini">
+
+						<a href="#"><img src="img/product4.jpg" alt="상품"></a>
+
+					</div>
+
+					<div class="mini">
+
+						<a href="#"><img src="img/product5.jpg" alt="상품"></a>
+
+					</div>		
+
+
+				</div>
+
+
+				<div id="price">
+
+					<h2>[코로나 힐링 제철과일 꾸러미]<br> 딸기 1kg + 참외 1kg + 한라봉 1kg + 짭짤이 토마토 500g</h2>
+
+					<p>힘내세요! 응원합니다. 비타민 충전! 면역력 업! 코로나 예방과 회복에 좋은 맛있는 과일 꾸러미</p>
+
+					<h3>79,800 원</h3>
+
+					<br>
+					<table>
+
+						<tr>
+							
+							<td><div class="purchase">구매혜택</div></td>
+							<td><div class="member">회원 적립금 : +798원 (상품 : 798원)</div></td>
+						</tr>
+
+						<tr>
+							<td><div class="purchase">원산지</div></td>
+							<td><div class="member">국내산</div></td>
+						</tr>
+
+						<tr>
+							<td><div class="purchase">판매단위</div></td>
+							<td><div class="member">금실 딸기 1kg, 스마트 꿀 참외 1kg, 써니트 한라봉 1kg, 짭짤이 토마토 500g</div></td>
+						</tr>
+
+						<tr>
+							<td><div class="purchase">배송방법</div></td>
+							<td><div class="member">새벽배송 / 택배배송</div></td>
+						</tr>
+
+						<tr>
+							<td><div class="purchase">배송비</div></td>
+							<td><div class="member">0원(3만원 이상 구매 시 무료배송) </div></td>
+						</tr>
+
+
+						
+
+
+						<tr>
+
+							<td><div class="purchase">패키지 업그레이드</div></td>
+
+							<td>
+								<div class="member">
+									<select name="select" id="select">
+
+
+										<option>추가상품</option>
+										<option>패키지업그레이드(실크보자기*노리개)</option>
+
+									</select>
+
+								</div>
+							</td>
+
+
+						</tr>
+
+
+						<tr>
+							<td>
+								<div class="purchase">메시지카드</div>
+							</td>
+
+							<td>
+								<div class="member">
+
+									<input type="radio" name="message" value="선택"><span>선택</span>
+									<input type="radio" name="message" value="선택안함"><span>선택안함</span></div></td>
+
+								</tr>
+
+
+								<tr>
+
+
+									<td><div class="purchase">수량</div></td>
+
+									<td>
+										<div class="member">
+											<select name="select" id="select">
+
+
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+
+												<option>4</option>
+
+												<option>5</option>
+											</div>
+										</td>
+
+									</tr>
+
+								</select>
+
+							</tr>
+
+						</table>
+
+
+						<button class="rel">바로 구매</button>
+
+						<button class="rel">장바구니 담기</button>
+
+
+					</div>
+
+
+				</div>
+
+				<div id="tab">
+
+
+
+					<div id="review">
+
+						<div id="detail">
+
+							<div id="wrap">
+
+								<div class="question"><a href="#">상품상세정보</a></div>
+								<div class="question"><a href="#">상품후기(1)</a></div>
+								<div class="question"><a href="#">상품문의(0)</a></div>
+
+
+							</div>
+
+						</div>
+
+
+
+					</div>
+
+					<div id="event">
+
+						<img src="img/event.jpg" alt="이벤트">
+					</div>
+
+					<div id="open">
+						<img src="img/open.jpg" alt="이벤트">
+
+					</div>
+
+					<div id="notice">
+						<img src="img/notice.jpg" alt="이벤트">
+
+					</div>
+
+					<div id="notice2">
+						<img src="img/notice2.jpg" alt="이벤트">
+
+					</div>
+
+
+
+				</div>
+
+				<div id="underbar">
+
+
+					<div id="review">
+
+						<div id="detail">
+
+							<div id="wrap">
+
+								<div class="question"><a href="#">상품상세정보</a></div>
+								<div class="question"><a href="#">상품후기(1)</a></div>
+								<div class="question"><a href="#">상품문의(0)</a></div>
+
+							</div>
+
+						</div>
+
+
+
+					</div>
+
+
+					<div id="paper">
+
+						<div id="paper1">
+
+
+							<div id="bloa">
+
+								<h2>상품후기</h2>
+
+							</div>
+
+							<button class="blob">상품후기 전체보기</button>
+							<button class="bloc">상품후기 글쓰기</button>
+
+						</div>
+
+						<div id="paper2">
+
+							<div id="good">
+								
+								<p>
+								선물로 보냈는데 너무 좋아하네요~~딸기가 예술이래요 ㅎ...</p>
+
+							</div>
+
+							<div id="naver">
+								
+								<p>네이버페이 구매자 (0회 구매)</p>
+
+							</div>
+
+							<div id="day">
+								
+								<p>2022.04.13</p>
+
+							</div>
+
+							<h4>1</h4>
+
+						</div>
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<footer>
+
+					<div class="bos">					
+
+						<div id="box">
+
+							<a href="#"><img src="img/footerlogo.png" alt=""></a>
+
+							<div class="icon">
+
+								<h3>Follow Us</h3>
+
+								<a href="#"><img src="img/face.png" alt=""></a>
+
+								<a href="#"><img src="img/insta.png" alt=""></a>
+
+								<a href="#"><img src="img/pen.png" alt=""></a>
+
+							</div>
+
+
+						</div>
+					</div>	
+
+
+
+
+
+					<div id="underbox">
+
+						<div id="ubox">
+
+							<ul>
+								<li> <a href="#"><span>회사소개</span></a> </li>
+								<li> <a href="#">ㅣ</a> </li>
+
+								<li><a href="#"><span>이용약관</span></a></li>
+								<li> <a href="#">ㅣ</a> </li>
+
+								<li><a href="#"><span>개인정보처리방침</span></a></li>
+								<li> <a href="#">ㅣ</a> </li>
+
+								<li><a href="#"><span>이용안내</span></a></li>
+								<li> <a href="#">ㅣ</a> </li>
+
+								<li><a href="#"><span>고객센터</span></a></li>
+
+
+							</ul>
+						</div>
+
+
+					</div>
+
+
+
+					<div id="under2box">
+
+
+						<div class="end">
+
+							<div class="center">
+
+								<h3>customer center</h3><br>
+
+								<h2>tel.1833-5059</h2><br>
+
+								<p>고객센터 운영시간</p><br>
+
+								<p>평일 오전 9:00 - 오후6:00
+									점심시간 오후 12:00 - 오후 1:00
+								토/일/공휴일 휴무</p><br>
+
+
+								<p>영업시간 이외에는 1:1문의 또는 카카오톡으로 문의 주시면
+								담당자 확인 후 빠른 답변 도와드리겠습니다.</p>
+
+
+							</div>
+
+							<div class="bank">
+
+								<h3>bank</h3><br>
+
+								<p>KB국민은행20680104272068
+
+								(주)진짜맛있는과일</p><br>
+
+								<h3>return/exchange</h3><br>
+
+								<p>(12204) 경기도 남양주시 와부읍 석실로316번길 29</p><br>
+
+								<p>자세한 교환 · 반품절차 안내는 문의란 및 공지사항을
+								참고해주세요</p><br>
+
+
+
+
+
+
+							</div>
+
+							<div class="company">
+
+								<h3>company</h3><br>
+
+								<p>상호명 : (주)진짜맛있는과일대표 : 양진모</p>
+								<p>본사 : 경기도 남양주시 와부읍 석실로316번길 29</p>
+								<p>서울사무소 : 서울특별시 중구 청계천로 100 시그니처타워 서관9층 933호</p><br>
+
+								<p>사업자등록번호 : 184-86-01427 [사업자번호조회]</p>
+								<p>통신판매업신고번호 : 제2020-와부조안-0272호</p>
+								<p>개인정보보호책임자 : 김용성</p><br>
+
+								<p>TEL : 1833-5059 ㅣ FAX : 02-6280-6324</p>
+								<p>Email / 제휴&제안 : <a href="#">commerce@bestf.co.kr</a></p><br>
+
+								<p>COPYRIGHT ⓒ 2021 (주)진짜맛있는과일 | 진맛과 All Rights Reserved.</p>
+
+
+
+
+
+
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</footer>
+
+
+
+			</body>
+			</html>
